@@ -1,11 +1,29 @@
 import React from 'react';
+import styles from './App.module.scss';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
+import { ProjectsPage } from './pages/ProjectsPage/ProjectsPage';
+import { ProjectTasksPage } from './pages/ProjectTasksPage/ProjectTasksPage';
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <ProjectsPage />,
+  },
+  {
+    path: '/project/:id',
+    element: <ProjectTasksPage />,
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
+  },
+]);
+
+export const App = () => {
   return (
-    <div className="App">
-      <h1>App</h1>
+    <div className={styles.container}>
+      <RouterProvider router={router} />
     </div>
   );
-}
-
-export default App;
+};
