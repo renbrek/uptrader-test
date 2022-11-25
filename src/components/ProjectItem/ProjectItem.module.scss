@@ -1,0 +1,18 @@
+.item {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  border-radius: 0.25em;
+
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  transition: 0.3s;
+}
+
+.item:hover {
+  background-color: rgb(226, 226, 226);
+}
