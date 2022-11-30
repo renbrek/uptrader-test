@@ -66,7 +66,6 @@ export const CommentItem: FC<Props> = (props) => {
         <div className={styles.comment}>
           <div className={styles.content}>
             <span>{comment.text}</span>
-            <div>{comment.id}</div>
             <div className={styles.buttons}>
               <button onClick={handleOpenReplyForm}>reply</button>
               <button onClick={handleRemoveComment}>delete</button>
@@ -98,7 +97,7 @@ export const CommentItem: FC<Props> = (props) => {
         </div>
       ) : (
         <>
-          <p>Comment was deleted {comment.id}</p>
+          <p>Comment was deleted</p>
           <br />
         </>
       )}
