@@ -15,6 +15,7 @@ export const DraggableTaskItem: FC<Props> = (props) => {
 
   const style = {
     transform: CSS.Transform.toString(transform),
+    touchAction: 'none',
     opacity: isDragging ? 0 : 1,
   };
 

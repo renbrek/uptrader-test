@@ -18,6 +18,7 @@ import {
   KeyboardSensor,
   PointerActivationConstraint,
   PointerSensor,
+  TouchSensor,
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
@@ -57,6 +58,7 @@ export const ProjectTasksPage = () => {
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint }),
+    useSensor(TouchSensor),
     useSensor(KeyboardSensor)
   );
 

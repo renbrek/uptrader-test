@@ -32,7 +32,7 @@ export const ProjectsPage = () => {
         opened={isCreateProjectFormOpen}
         onClose={() => setIsCreateProjectFormOpen(false)}
       >
-        <CreateProjectForm />
+        <CreateProjectForm closeModal={() => setIsCreateProjectFormOpen(false)}/>
       </Modal>
     </>
   );

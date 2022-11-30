@@ -1,9 +1,14 @@
-import { useState, MouseEvent, useEffect } from 'react';
+import { useState, MouseEvent, useEffect, FC } from 'react';
 import styles from './CreateProjectForm.module.scss';
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { addProject } from '../../store/projects/projectsActions';
 
-export const CreateProjectForm = () => {
+interface Props {
+  closeModal(): void;
+}
+
+export const CreateProjectForm: FC<Props> = (props) => {
+  const { closeModal } = props;
   const [name, setName] = useState('');
   const [isNameValid, setIsNameValid] = useState(false);
 
@@ -13,6 +18,7 @@ export const CreateProjectForm = () => {
     event.preventDefault();
     dispatch(addProject(name));
     setName('');
+    closeModal();
   };
 
   useEffect(() => {
