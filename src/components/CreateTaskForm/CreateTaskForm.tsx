@@ -106,7 +106,7 @@ export const CreateTaskForm: FC<Props> = (props) => {
         </div>
       </div>
       <button onClick={handleSubmit} disabled={!isTitleValid}>
-        Add
+        add
       </button>
     </form>
   );

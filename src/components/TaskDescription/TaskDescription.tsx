@@ -44,7 +44,7 @@ export const TaskDescription: FC<Props> = (props) => {
     <div>
       {!isEditDescriptionFormOpen ? (
         <button onClick={handleOpenEditDescriptionForm}>
-          {task.description ? `Edit description` : 'Add discription'}
+          {task.description ? `edit description` : 'add discription'}
         </button>
       ) : null}
       <div className={styles.description}>

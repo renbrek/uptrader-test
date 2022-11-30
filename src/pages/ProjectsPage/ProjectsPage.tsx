@@ -19,7 +19,7 @@ export const ProjectsPage = () => {
       <div>
         <h1 className={styles.title}>Projects</h1>
         <button onClick={handleAddProject} className={styles.addButton}>
-          Add project <h2>+</h2>
+          add project +
         </button>
         <div className={styles.projects}>
           {projects.map((project) => (

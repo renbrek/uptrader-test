@@ -39,7 +39,7 @@ export const CreateProjectForm: FC<Props> = (props) => {
         />
       </div>
       <button onClick={handleSubmit} disabled={!isNameValid}>
-        Add
+        add
       </button>
     </form>
   );
