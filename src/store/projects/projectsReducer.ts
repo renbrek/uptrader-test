@@ -5,20 +5,20 @@ import {
 } from './projectsActions';
 import { ADD_PROJECT, REMOVE_PROJECT } from './projectsConsts';
 
-const projectsInitialState: Project[] = [];
+type ProjectsActionsType = AddProjectActionType | RemoveProjectActionType;
 
-type ProjectActionsType = AddProjectActionType | RemoveProjectActionType;
+const projectsInitialState: Project[] = [];
 
 export const projectsReducer = (
   state = projectsInitialState,
-  action: ProjectActionsType
+  action: ProjectsActionsType
 ) => {
   switch (action.type) {
     case ADD_PROJECT: {
       const newState: Project[] = [
         ...state,
         {
-          id: Date.now(),
+          id: Date.now().toString(),
           name: action.payload.name,
         },
       ];

@@ -1,33 +1,42 @@
 export type Task = {
-  id: number;
-  header: string;
-  description: string;
+  id: string;
+  title: string;
+  description?: string;
   creationDate: Date;
-  developmentTime: Date;
-  doneTime: Date;
+  developmentStartTime?: Date;
+  doneTime?: Date;
   priority: Priority;
-  attachedFiles?: FileList;
+  attachedFiles: MyFile[];
   status: Status;
   subtasks: Subtask[];
-  parentTaskId?: string;
-  projectTaskId?: string;
+  comments: Comment[];
+  projectId: string;
 };
 
-type Subtask = {
-  id: number;
-  title: string;
-  status: boolean;
-};
-
-enum Status {
-  Queue,
-  Development,
-  Done,
-}
-
-enum Priority {
+export enum Priority {
   Priority1,
   Priority2,
   Priority3,
   Priority4,
 }
+
+export type Status = 'queue' | 'development' | 'done';
+
+export type Subtask = {
+  id: string;
+  title: string;
+  status: boolean;
+};
+
+export type Comment = {
+  id: string;
+  text: string;
+  parentId?: string;
+};
+
+export type MyFile = {
+  id: string;
+  name: string;
+  size: number;
+  type: string;
+};

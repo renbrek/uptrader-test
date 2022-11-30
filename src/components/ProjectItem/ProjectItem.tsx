@@ -4,7 +4,6 @@ import { Project } from '../../types/Project';
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { removeProject } from '../../store/projects/projectsActions';
 import { useNavigate } from 'react-router-dom';
-import { Modal } from '../Modal/Modal';
 
 interface Props {
   project: Project;

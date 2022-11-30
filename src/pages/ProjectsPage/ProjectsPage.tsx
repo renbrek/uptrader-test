@@ -3,12 +3,10 @@ import styles from './ProjectsPage.module.scss';
 import { CreateProjectForm } from '../../components/CreateProjectForm/CreateProjectForm';
 import { Modal } from '../../components/Modal/Modal';
 import { ProjectItem } from '../../components/ProjectItem/ProjectItem';
-import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
+import { useAppSelector } from '../../hooks/reduxHooks';
 
 export const ProjectsPage = () => {
   const [isCreateProjectFormOpen, setIsCreateProjectFormOpen] = useState(false);
-
-  const dispatch = useAppDispatch();
 
   const projects = useAppSelector((state) => state.projects);
 

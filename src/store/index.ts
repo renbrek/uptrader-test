@@ -9,6 +9,7 @@ export const configureStore = () => {
   store.subscribe(() =>
     saveState({
       projects: store.getState().projects,
+      tasks: store.getState().tasks,
     })
   );
 

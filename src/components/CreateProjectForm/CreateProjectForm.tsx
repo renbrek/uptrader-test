@@ -9,7 +9,7 @@ export const CreateProjectForm = () => {
 
   const dispatch = useAppDispatch();
 
-  const handleAddProject = (event: MouseEvent) => {
+  const handleSubmit = (event: MouseEvent) => {
     event.preventDefault();
     dispatch(addProject(name));
     setName('');
@@ -32,7 +32,7 @@ export const CreateProjectForm = () => {
           value={name}
         />
       </div>
-      <button onClick={handleAddProject} disabled={!isNameValid}>
+      <button onClick={handleSubmit} disabled={!isNameValid}>
         Add
       </button>
     </form>

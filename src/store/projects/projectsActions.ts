@@ -10,7 +10,7 @@ export type AddProjectActionType = {
 export type RemoveProjectActionType = {
   type: typeof REMOVE_PROJECT;
   payload: {
-    id: number;
+    id: string;
   };
 };
 
@@ -21,7 +21,7 @@ export const addProject = (name: string): AddProjectActionType => ({
   },
 });
 
-export const removeProject = (id: number): RemoveProjectActionType => ({
+export const removeProject = (id: string): RemoveProjectActionType => ({
   type: REMOVE_PROJECT,
   payload: {
     id,
